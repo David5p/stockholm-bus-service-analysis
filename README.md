@@ -118,15 +118,8 @@ SQL was used in Google BigQuery to explore the dataset, prepare the data and cal
 Bus routes were identified using the GTFS `route_type` value of `700`.
 This was the first step in narrowing the dataset to the bus services relevant to the business question.
 
-```sql
-SELECT 
-  route_type,
-  route_short_name, 
-  route_long_name
-FROM `sltraffik.stockholm_transport.routes`
-WHERE route_type = 700
-ORDER BY route_short_name;
-```
+[View SQL query](sql/identify_bus_routes.sql)
+
 
 ### 2. Calculating scheduled service by route
 
