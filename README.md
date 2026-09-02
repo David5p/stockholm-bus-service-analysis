@@ -1,6 +1,13 @@
 # stockholm-bus-service-analysis
 SQL and Tableau analysis of Stockholm bus service frequency by route, time of day, and weekday vs weekend.
 
+## Project Overview
+
+**Project type:** SQL + Tableau portfolio project
+**Data:** SL GTFS scheduled timetable data
+**Tools:** Google BigQuery, SQL, Tableau
+**Focus:** Bus service frequency by route, hour, and weekday/weekend
+
 ## Introduction
 
 This project analyses scheduled Stockholm bus service using SL timetable data for the service period from 18 August to 12 December 2026.
@@ -12,6 +19,12 @@ The project uses SQL in Google BigQuery for data exploration and analysis, with 
 ## Business Question
 
 **How does scheduled Stockholm bus service frequency vary by route, time of day, and weekday versus weekend?**
+
+## Key Insights
+- Route 160 had the highest average scheduled service at approximately 272 departures per operating day.
+- Scheduled service varied substantially by time of day, with higher levels during peak periods.
+- Weekday service was generally stronger than weekend service, particularly during commuter hours.
+- Some routes had significantly different operating patterns between weekdays and weekends, including routes that did not operate on weekends
 
 ## Objectives
 
@@ -230,6 +243,29 @@ The bar chart ranks the top 15 routes by average scheduled trips per operating d
 The heatmap shows how scheduled departures are distributed across hours of the day, with weekday and weekend patterns shown separately.
 
 Together, the visualizations show how scheduled bus service varies by route, time of day and day type.
+
+![Stockholm Bus Service Dashboard](StockholmBusServiceFrequency.png)
+
+## Key Findings
+
+### 1. Highest overall service
+
+Route 160 had the highest average number of scheduled trips per operating day, at approximately 272 trips per day during the timetable period.
+
+### 2. Service varies by hour
+
+Scheduled bus departures varied considerably throughout the day. High-frequency routes did not maintain the same level of service during every hour, with differences between peak and off-peak periods.
+
+### 3. Weekday service is stronger
+
+Scheduled bus service was substantially higher on weekdays than weekends, particularly during morning and afternoon periods.
+This may reflect higher expected travel demand during typical weekday commuter periods, when more people travel to and from work or education.
+
+### 4. Routes can have different service patterns
+
+Bus routes did not necessarily operate with the same pattern throughout the week. For example, Route 827 operated on weekdays but not weekends, while UL805 showed differences in operating hours and scheduled frequency between weekdays and weekends.
+
+
 
 
 
