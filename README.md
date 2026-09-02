@@ -3,10 +3,15 @@ SQL and Tableau analysis of Stockholm bus service frequency by route, time of da
 
 ## Project Overview
 
+
 **Project type:** SQL + Tableau portfolio project
+
 **Data:** SL GTFS scheduled timetable data
+
 **Tools:** Google BigQuery, SQL, Tableau
+
 **Focus:** Bus service frequency by route, hour, and weekday/weekend
+
 
 ## Introduction
 
@@ -24,7 +29,7 @@ The project uses SQL in Google BigQuery for data exploration and analysis, with 
 - Route 160 had the highest average scheduled service at approximately 272 departures per operating day.
 - Scheduled service varied substantially by time of day, with higher levels during peak periods.
 - Weekday service was generally stronger than weekend service, particularly during commuter hours.
-- Some routes had significantly different operating patterns between weekdays and weekends, including routes that did not operate on weekends
+- Some routes had significantly different operating patterns between weekdays and weekends, including routes that did not operate on weekends.
 
 ## Objectives
 
