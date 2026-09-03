@@ -1,5 +1,5 @@
 # stockholm-bus-service-analysis
-SQL and Tableau analysis of Stockholm bus service frequency by route, time of day, and weekday vs weekend.
+SQL and Tableau analysis of scheduled Stockholm bus service frequency by route, time of day, and weekday vs weekend.
 
 ## Project Overview
 
@@ -25,11 +25,27 @@ The project uses SQL in Google BigQuery for data exploration and analysis, with 
 
 **How does scheduled Stockholm bus service frequency vary by route, time of day, and weekday versus weekend?**
 
-## Key Insights
-- Route 160 had the highest average scheduled service at approximately 272 departures per operating day.
-- Scheduled service varied substantially by time of day, with higher levels during peak periods.
-- Weekday service was generally stronger than weekend service, particularly during commuter hours.
-- Some routes had significantly different operating patterns between weekdays and weekends, including routes that did not operate on weekends.
+## Key Findings
+
+### 1. Highest overall service
+
+Route 160 had the highest average number of scheduled trips per operating day, at approximately 272 trips per day during the timetable period.
+
+### 2. Service varies by hour
+
+Scheduled bus departures varied considerably throughout the day. High-frequency routes did not maintain the same level of service during every hour, with differences between peak and off-peak periods.
+
+### 3. Weekday service is stronger
+
+Scheduled bus service was substantially higher on weekdays than weekends, particularly during morning and afternoon periods.
+This pattern may be consistent with higher expected travel demand during typical weekday commuter periods, although passenger demand was not analysed in this project.
+
+
+### 4. Routes can have different service patterns
+
+Bus routes did not necessarily operate with the same pattern throughout the week. For example, Route 827 operated on weekdays but not weekends, while UL805 showed differences in operating hours and scheduled frequency between weekdays and weekends.
+
+
 
 ## Objectives
 
@@ -40,6 +56,19 @@ The analysis aims to:
 - Compare scheduled bus service between weekdays and weekends.
 - Investigate how operating days and service patterns differ between individual routes.
 
+ ## Tableau Dashboard
+
+ [View the interactive Tableau dashboard →](https://public.tableau.com/app/profile/david.archer4886/viz/SLbusschedule/Dashboard1)
+
+The Tableau dashboard provides two complementary views of scheduled bus service.
+
+The bar chart ranks the top 15 routes by average scheduled trips per operating day, showing which routes have the highest overall scheduled service.
+
+The heatmap shows how scheduled departures are distributed across hours of the day, with weekday and weekend patterns shown separately.
+
+Together, the visualizations show how scheduled bus service varies by route, time of day and day type.
+
+![Stockholm Bus Service Dashboard](StockholmBusServiceFrequency.png)
 
 ## Data
 
@@ -62,12 +91,14 @@ The data was selected because it provides scheduled timetable information that c
 
 I first explored the available public transport data to understand the different transport modes and table relationships. Bus services were then identified using the GTFS `route_type` value for bus services (`700`).
 
-## Tools
+## Tools & Skills
 
-- **Google BigQuery** — used for SQL data exploration, transformation and analysis.
-- **SQL** — used to join tables, calculate scheduled service measures and investigate weekday/weekend patterns.
-- **Tableau** — used to create the final dashboard and visualize scheduled bus service frequency.
-- **GitHub** — used to document and present the project.
+- **SQL / Google BigQuery** — data exploration, joins, aggregation and transformation
+- **Tableau** — dashboard development and data visualization
+- **GTFS data** — working with relational timetable data
+- **Data analysis** — KPI development, time-based analysis and weekday/weekend comparisons
+- **Data communication** — presenting findings, assumptions and limitations
+- **GitHub** — project documentation and version-controlled SQL files
 
 ## Data Preparation & Methodology
 
@@ -157,40 +188,6 @@ The service date was classified as either a weekday or weekend. This allowed sch
 This directly addresses the weekday versus weekend part of the business question and shows whether scheduled service levels change depending on the day type.
 
 [View SQL query](sql/weekday_weekend_service.sql)
-
- ## Tableau Dashboard
-
- [View the interactive Tableau dashboard →](https://public.tableau.com/app/profile/david.archer4886/viz/SLbusschedule/Dashboard1)
-
-The Tableau dashboard provides two complementary views of scheduled bus service.
-
-The bar chart ranks the top 15 routes by average scheduled trips per operating day, showing which routes have the highest overall scheduled service.
-
-The heatmap shows how scheduled departures are distributed across hours of the day, with weekday and weekend patterns shown separately.
-
-Together, the visualizations show how scheduled bus service varies by route, time of day and day type.
-
-![Stockholm Bus Service Dashboard](StockholmBusServiceFrequency.png)
-
-## Key Findings
-
-### 1. Highest overall service
-
-Route 160 had the highest average number of scheduled trips per operating day, at approximately 272 trips per day during the timetable period.
-
-### 2. Service varies by hour
-
-Scheduled bus departures varied considerably throughout the day. High-frequency routes did not maintain the same level of service during every hour, with differences between peak and off-peak periods.
-
-### 3. Weekday service is stronger
-
-Scheduled bus service was substantially higher on weekdays than weekends, particularly during morning and afternoon periods.
-This pattern may be consistent with higher expected travel demand during typical weekday commuter periods, although passenger demand was not analysed in this project.
-
-
-### 4. Routes can have different service patterns
-
-Bus routes did not necessarily operate with the same pattern throughout the week. For example, Route 827 operated on weekdays but not weekends, while UL805 showed differences in operating hours and scheduled frequency between weekdays and weekends.
 
 ## Data Limitations
 
