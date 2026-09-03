@@ -1,3 +1,4 @@
+![Stockholm Bus Service Dashboard](StockholmBusServiceFrequency.png)
 # stockholm-bus-service-analysis
 SQL and Tableau analysis of scheduled Stockholm bus service frequency by route, time of day, and weekday vs weekend.
 
@@ -67,8 +68,6 @@ The bar chart ranks the top 15 routes by average scheduled trips per operating d
 The heatmap shows how scheduled departures are distributed across hours of the day, with weekday and weekend patterns shown separately.
 
 Together, the visualizations show how scheduled bus service varies by route, time of day and day type.
-
-![Stockholm Bus Service Dashboard](StockholmBusServiceFrequency.png)
 
 ## Data
 
